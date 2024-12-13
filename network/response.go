@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"log"
 	"strings"
-	"stu-campus-network-auto-login/model"
+	"stu-auto-login/model"
 )
 
 func ResolveResponse(bodyStr string) (model.Response, error) {

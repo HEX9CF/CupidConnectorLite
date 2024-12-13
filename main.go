@@ -6,8 +6,8 @@ import (
 	"log"
 	"os"
 	"strings"
-	"stu-campus-network-auto-login/api"
-	"stu-campus-network-auto-login/conf"
+	"stu-auto-login/api"
+	"stu-auto-login/conf"
 )
 
 const rememberPwd = "0"

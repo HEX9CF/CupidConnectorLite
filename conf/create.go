@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 	"strings"
-	"stu-campus-network-auto-login/utils"
+	"stu-auto-login/utils"
 )
 
 func CreateEnv() error {

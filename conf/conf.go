@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/joho/godotenv"
 	"log"
-	"stu-campus-network-auto-login/utils"
+	"stu-auto-login/utils"
 )
 
 const envPath = "stu.env"

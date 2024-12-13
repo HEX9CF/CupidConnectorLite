@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 	"log"
-	"stu-campus-network-auto-login/network"
-	"stu-campus-network-auto-login/utils"
+	"stu-auto-login/network"
+	"stu-auto-login/utils"
 )
 
 const LoginOpr = "pwdLogin"
