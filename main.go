@@ -1,27 +1,15 @@
 package main
 
 import (
-	"bytes"
 	"log"
-	"net/http"
+	"stu-campus-network-auto-login/api"
 )
 
+const url = "http://a.stu.edu.cn/ac_portal/login.php"
+
 func main() {
-	url := "http://a.stu.edu.cn/ac_portal/login.php"
-	username := ""
-	password := ""
-	opr := "pwdLogin"
-	rememberPwd := "0"
-	data := "opr=" + opr + "&userName=" + username + "&pwd=" + password + "&rememberPwd=" + rememberPwd
-	contentType := "application/x-www-form-urlencoded"
-
-	resp, err := http.Post(url, contentType, bytes.NewReader([]byte(data)))
+	err := api.Login(url, username, password, "0")
 	if err != nil {
-		log.Println("请求发送失败！")
-		panic(err)
+		log.Println(err)
 	}
-	defer resp.Body.Close()
-
-	log.Println("请求发送成功")
-	log.Println("登录成功，用户：" + username + "，您已通过上网认证！")
 }
