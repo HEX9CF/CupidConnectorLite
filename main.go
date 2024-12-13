@@ -1,13 +1,16 @@
+/*
+@author Howard Zheng <hex9cf@aliyun.com>
+*/
 package main
 
 import (
 	"bufio"
+	"cupid-connector/api"
+	"cupid-connector/conf"
 	"fmt"
 	"log"
 	"os"
 	"strings"
-	"stu-auto-login/api"
-	"stu-auto-login/conf"
 )
 
 const rememberPwd = "0"

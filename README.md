@@ -1,10 +1,10 @@
-# 汕头大学校园网自动化登录工具
+# Cupid Connector
 
 ## 项目简介
 
-汕头大学校园网自动化登录工具是一个用 Go 语言编写的软件，该工具通过模拟登录请求，并处理登录响应，从而实现自动化登录功能。
+一款用于自动登录汕头大学校园网的命令行工具。该工具通过发送登录请求并处理响应，实现自动化登录功能，方便汕大师生登录校园网。不需要用户手动打开浏览器，输入账号密码，只需双击运行程序即可完成登录操作。该工具支持自动登录、重新认证、注销账号等功能，同时支持初始化配置文件，简化用户的配置过程。不同于 Python 脚本，该工具是一个独立的可执行文件，开箱即用，无需安装 Python 环境，方便用户使用。
 
-Shantou University Campus Network Auto Login Tool is a software written in Go language. This tool automates the login process by simulating login requests and handling login responses.
+A command-line tool for automatically logging into the Shantou University campus network. This tool automates the login process by sending login requests and handling responses, simplifying the user's login procedure.
 
 ## 功能简介
 

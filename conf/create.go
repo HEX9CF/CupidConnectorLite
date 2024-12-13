@@ -2,11 +2,11 @@ package conf
 
 import (
 	"bufio"
+	"cupid-connector/utils"
 	"fmt"
 	"log"
 	"os"
 	"strings"
-	"stu-auto-login/utils"
 )
 
 func CreateEnv() error {

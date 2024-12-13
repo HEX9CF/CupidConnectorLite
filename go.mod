@@ -1,4 +1,4 @@
-module stu-auto-login
+module cupid-connector
 
 go 1.23
 

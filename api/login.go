@@ -1,11 +1,11 @@
 package api
 
 import (
+	"cupid-connector/network"
+	"cupid-connector/utils"
 	"errors"
 	"fmt"
 	"log"
-	"stu-auto-login/network"
-	"stu-auto-login/utils"
 )
 
 const LoginOpr = "pwdLogin"

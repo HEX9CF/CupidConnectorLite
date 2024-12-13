@@ -1,10 +1,10 @@
 package network
 
 import (
+	"cupid-connector/model"
 	"encoding/json"
 	"log"
 	"strings"
-	"stu-auto-login/model"
 )
 
 func ResolveResponse(bodyStr string) (model.Response, error) {
