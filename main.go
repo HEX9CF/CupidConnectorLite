@@ -32,12 +32,14 @@ func main() {
 
 	reader := bufio.NewReader(os.Stdin)
 	for {
-		fmt.Println(" -------- 命令列表 -------- ")
-		fmt.Println(" 退出程序：exit")
-		fmt.Println(" 重新认证：login")
-		fmt.Println(" 注销账号：logout")
-		fmt.Println(" 初始化配置：init")
-		fmt.Println(" ------------------------- ")
+		fmt.Println("╔═════════════════════════╗")
+		fmt.Println("║     Cupid Connector     ║")
+		fmt.Println("╠═════════════════════════╣")
+		fmt.Println("║ 退出程序：exit           ║")
+		fmt.Println("║ 重新认证：login          ║")
+		fmt.Println("║ 注销账号：logout         ║")
+		fmt.Println("║ 初始化配置：init         ║")
+		fmt.Println("╚═════════════════════════╝")
 		for reader.Buffered() > 0 {
 			_, err := reader.Discard(reader.Buffered())
 			if err != nil {
