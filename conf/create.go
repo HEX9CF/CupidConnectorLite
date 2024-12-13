@@ -6,11 +6,10 @@ import (
 	"log"
 	"os"
 	"strings"
-	"stu-campus-network-auto-login/model"
 	"stu-campus-network-auto-login/utils"
 )
 
-func createEnv() error {
+func CreateEnv() error {
 	reader := bufio.NewReader(os.Stdin)
 	for reader.Buffered() > 0 {
 		_, err := reader.Discard(reader.Buffered())
@@ -20,24 +19,34 @@ func createEnv() error {
 		}
 	}
 
-	u := model.User{}
+	setDefault()
+
 	fmt.Println("请输入校园网认证信息：")
 	fmt.Print("用户名：")
-	u.Username, _ = reader.ReadString('\n')
-	u.Username = strings.TrimSpace(u.Username)
+	Username, _ = reader.ReadString('\n')
+	Username = strings.TrimSpace(Username)
 	fmt.Print("密码：")
-	u.Password, _ = reader.ReadString('\n')
-	u.Password = strings.TrimSpace(u.Password)
+	Password, _ = reader.ReadString('\n')
+	Password = strings.TrimSpace(Password)
 
-	autoExitVal := defaultAutoExit
+	AutoExit = defaultAutoExit
 	fmt.Print("认证成功后是否自动退出程序(Y/N)？")
-	autoExit, _ := reader.ReadString('\n')
-	autoExit = strings.TrimSpace(autoExit)
-	autoExit = strings.ToLower(autoExit)
-	if autoExit == "y" {
-		autoExitVal = "TRUE"
+	autoQuit, _ := reader.ReadString('\n')
+	autoQuit = strings.TrimSpace(autoQuit)
+	autoQuit = strings.ToLower(autoQuit)
+	if autoQuit == "y" {
+		AutoExit = "TRUE"
 	}
 
+	err := saveEnv()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func saveEnv() error {
 	log.Println("正在创建配置文件...")
 	v, err := utils.IsFileExists(envPath)
 	if err != nil {
@@ -59,9 +68,9 @@ func createEnv() error {
 	defer file.Close()
 
 	content := "STU_URL=" + defaultUrl + "\n" +
-		"STU_USERNAME=" + u.Username + "\n" +
-		"STU_PASSWORD=" + u.Password + "\n" +
-		"AUTO_EXIT=" + autoExitVal + "\n"
+		"STU_USERNAME=" + Username + "\n" +
+		"STU_PASSWORD=" + Password + "\n" +
+		"AUTO_EXIT=" + AutoExit + "\n"
 
 	_, err = file.WriteString(content)
 	if err != nil {

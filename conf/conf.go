@@ -19,7 +19,7 @@ func InitEnv() error {
 	if !v {
 		log.Println("配置文件不存在！")
 		fmt.Println("首次运行程序将创建配置文件")
-		err := createEnv()
+		err := CreateEnv()
 		if err != nil {
 			return err
 		}
@@ -30,6 +30,8 @@ func InitEnv() error {
 		log.Println("加载配置文件失败！")
 		return err
 	}
+
+	getEnv()
 
 	log.Println("加载配置文件成功")
 	return nil

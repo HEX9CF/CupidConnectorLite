@@ -6,3 +6,10 @@ const (
 	defaultPasswrod = "password"
 	defaultAutoExit = "FALSE"
 )
+
+func setDefault() {
+	Url = defaultUrl
+	Username = defaultUsername
+	Password = defaultPasswrod
+	AutoExit = defaultAutoExit
+}

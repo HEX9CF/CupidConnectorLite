@@ -13,28 +13,28 @@ import (
 const rememberPwd = "0"
 
 func main() {
+	log.SetOutput(os.Stdout)
 	err := conf.InitEnv()
 	if err != nil {
 		panic(err)
 	}
-	url := os.Getenv("STU_URL")
-	username := os.Getenv("STU_USERNAME")
-	password := os.Getenv("STU_PASSWORD")
 
-	err = api.Login(url, username, password, rememberPwd)
+	err = api.Login(conf.Url, conf.Username, conf.Password, rememberPwd)
 	if err != nil {
 		log.Println(err)
 	}
-	if err == nil && os.Getenv("AUTO_EXIT") == "TRUE" {
+	if err == nil && conf.AutoExit == "TRUE" {
 		os.Exit(0)
 	}
 
 	reader := bufio.NewReader(os.Stdin)
 	for {
-		fmt.Println(" -------- 命令行模式 -------- ")
-		fmt.Println("注销：logout")
-		fmt.Println("退出程序：exit")
-		fmt.Println("重新认证：login")
+		fmt.Println(" -------- 命令列表 -------- ")
+		fmt.Println(" 退出程序：exit")
+		fmt.Println(" 重新认证：login")
+		fmt.Println(" 注销账号：logout")
+		fmt.Println(" 初始化配置：init")
+		fmt.Println(" ------------------------- ")
 		for reader.Buffered() > 0 {
 			_, err := reader.Discard(reader.Buffered())
 			if err != nil {
@@ -48,13 +48,19 @@ func main() {
 		input = strings.ToLower(input)
 		switch input {
 		case "logout":
-			err := api.Logout(url)
+			err := api.Logout(conf.Url)
 			if err != nil {
 				log.Println(err)
 				break
 			}
 		case "login":
-			err := api.Login(url, username, password, rememberPwd)
+			err := api.Login(conf.Url, conf.Username, conf.Password, rememberPwd)
+			if err != nil {
+				log.Println(err)
+				break
+			}
+		case "init":
+			err := conf.CreateEnv()
 			if err != nil {
 				log.Println(err)
 				break
