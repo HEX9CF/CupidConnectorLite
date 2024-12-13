@@ -2,13 +2,11 @@
 
 ## 项目简介
 
-一款用于自动登录汕头大学校园网的命令行工具。该工具通过发送登录请求并处理响应，实现自动化登录功能，方便汕大师生登录校园网。不需要用户手动打开浏览器，输入账号密码，只需双击运行程序即可完成登录操作。
+一款用于自动登录汕头大学校园网的命令行工具。该工具通过发送登录请求并处理响应，实现自动化登录功能，方便汕大师生登录校园网。
 
-该工具支持自动登录、重新认证、注销账号等功能，同时支持初始化配置文件，简化用户的配置过程。不同于 Python 脚本，该工具是一个独立的可执行文件，开箱即用，无需安装 Python 环境，方便用户使用。
+该工具支持自动登录、重新认证、注销账号等功能，同时支持初始化配置文件，简化用户的配置过程。不需要用户手动打开浏览器，输入账号密码，只需双击运行程序即可完成登录操作。将程序添加到开机启动项，即可实现开机自动登录校园网。不同于 Python 脚本，该工具是一个独立的可执行文件，开箱即用，无需安装 Python 环境，方便用户使用。
 
-A command-line tool for automatically logging into the Shantou University campus network. This tool automates the login process by sending login requests and handling responses, simplifying the login procedure for Shantou University students and staff. Users do not need to manually open a browser and enter their credentials; they can simply double-click to run the program and complete the login process.
-
-The tool supports features such as automatic login, re-authentication, account logout, and configuration file initialization, simplifying the user's setup process. Unlike Python scripts, this tool is a standalone executable file, ready to use out of the box without requiring a Python environment, making it convenient for users.
+A command-line tool for automatically logging into the Shantou University campus network. This tool automates the login process by sending login requests and handling responses, simplifying the login procedure for Shantou University students and staff. 
 
 ## 功能简介
 
@@ -24,7 +22,7 @@ The tool supports features such as automatic login, re-authentication, account l
 3. **自动登录**：程序会自动发送认证请求，登录校园网，登录成功后会显示登录成功的提示信息。
 4. **自动退出**：如果用户开启了认证成功自动退出功能，程序会在认证成功后立即自动退出，不会进入命令模式。如果没有认证成功，仍会进入命令模式。
 5. **命令模式**: 如果用户没有开启认证成功自动退出功能，在自动登录完成后，程序会进入命令模式，用户可以输入命令来执行相应的操作。
-6. **开机自启**：用户可以将程序添加到开机启动项，实现开机自动登录校园网。
+6. **开机自启**：用户可以将程序添加到开机启动项，实现开机自动登录校园网。具体方法请参考下文。
 
 ## 命令列表
 
@@ -50,3 +48,16 @@ STU_PASSWORD=password
 # 认证成功后自动退出程序
 AUTO_EXIT=FALSE
 ```
+
+## 开机自启
+
+用户可以将程序添加到开机启动项，实现开机自动登录校园网。步骤如下：
+
+1. 右键点击可执行文件 `cupid-connector.exe`，选择“创建快捷方式”。
+2. 按 `Win + R` 打开运行对话框。
+3. 输入 `shell:startup` 并按回车，打开启动文件夹。 
+4. 将刚才创建的快捷方式移动到这个文件夹中。
+
+如果需要取消开机自启，只需将快捷方式移出启动文件夹即可。
+
+
