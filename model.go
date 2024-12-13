@@ -1,10 +1,10 @@
 package main
 
 type Response struct {
-	Success  bool   `json:"success"`
-	Msg      string `json:"msg"`
-	Action   string `json:"action"`
-	Pop      int    `json:"pop"`
-	UserName string `json:"userName"`
-	Location string `json:"location"`
+	Success  bool   `json:"success,omitempty"`
+	Msg      string `json:"msg,omitempty"`
+	Action   string `json:"action,omitempty"`
+	Pop      int    `json:"pop,omitempty"`
+	UserName string `json:"userName,omitempty"`
+	Location string `json:"location,omitempty"`
 }
