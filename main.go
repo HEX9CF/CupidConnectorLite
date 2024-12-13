@@ -25,6 +25,9 @@ func main() {
 	if err != nil {
 		log.Println(err)
 	}
+	if err == nil && os.Getenv("AUTO_EXIT") == "TRUE" {
+		os.Exit(0)
+	}
 
 	reader := bufio.NewReader(os.Stdin)
 	for {
