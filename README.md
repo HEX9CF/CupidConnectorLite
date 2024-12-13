@@ -2,9 +2,13 @@
 
 ## 项目简介
 
-一款用于自动登录汕头大学校园网的命令行工具。该工具通过发送登录请求并处理响应，实现自动化登录功能，方便汕大师生登录校园网。不需要用户手动打开浏览器，输入账号密码，只需双击运行程序即可完成登录操作。该工具支持自动登录、重新认证、注销账号等功能，同时支持初始化配置文件，简化用户的配置过程。不同于 Python 脚本，该工具是一个独立的可执行文件，开箱即用，无需安装 Python 环境，方便用户使用。
+一款用于自动登录汕头大学校园网的命令行工具。该工具通过发送登录请求并处理响应，实现自动化登录功能，方便汕大师生登录校园网。不需要用户手动打开浏览器，输入账号密码，只需双击运行程序即可完成登录操作。
 
-A command-line tool for automatically logging into the Shantou University campus network. This tool automates the login process by sending login requests and handling responses, simplifying the user's login procedure.
+该工具支持自动登录、重新认证、注销账号等功能，同时支持初始化配置文件，简化用户的配置过程。不同于 Python 脚本，该工具是一个独立的可执行文件，开箱即用，无需安装 Python 环境，方便用户使用。
+
+A command-line tool for automatically logging into the Shantou University campus network. This tool automates the login process by sending login requests and handling responses, simplifying the login procedure for Shantou University students and staff. Users do not need to manually open a browser and enter their credentials; they can simply double-click to run the program and complete the login process.
+
+The tool supports features such as automatic login, re-authentication, account logout, and configuration file initialization, simplifying the user's setup process. Unlike Python scripts, this tool is a standalone executable file, ready to use out of the box without requiring a Python environment, making it convenient for users.
 
 ## 功能简介
 
