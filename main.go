@@ -7,13 +7,21 @@ import (
 	"os"
 	"strings"
 	"stu-campus-network-auto-login/api"
+	"stu-campus-network-auto-login/conf"
 )
 
-const url = "http://a.stu.edu.cn/ac_portal/login.php"
+const rememberPwd = "0"
 
 func main() {
-	rememberPwd := "0"
-	err := api.Login(url, username, password, rememberPwd)
+	err := conf.InitEnv()
+	if err != nil {
+		panic(err)
+	}
+	url := os.Getenv("STU_URL")
+	username := os.Getenv("STU_USERNAME")
+	password := os.Getenv("STU_PASSWORD")
+
+	err = api.Login(url, username, password, rememberPwd)
 	if err != nil {
 		log.Println(err)
 	}
