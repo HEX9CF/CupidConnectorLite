@@ -31,6 +31,8 @@ A lightweight tool for automatically logging into the Shantou University campus 
 - `init`: 重新初始化配置文件。
 - `exit`：退出程序。
 
+![image](https://github.com/user-attachments/assets/22ad0a14-e7ec-4490-932c-89d906c2a3a0)
+
 ## 配置文件
 
 配置文件为 `stu.env`，位于程序运行目录下。 配置文件内容如下：
