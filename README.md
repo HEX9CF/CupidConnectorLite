@@ -8,6 +8,13 @@
 
 A lightweight tool for automatically logging into the Shantou University campus network. It automates the login process by sending login requests and handling responses, making it convenient for Shantou University students and staff to log into the campus network.
 
+## 软件版本
+
+- Cupid Connector（带 GUI 完整版）
+  [https://github.com/HEX9CF/CupidConnector](https://github.com/HEX9CF/CupidConnector)
+- Cupid Connector Lite（命令行轻量版）
+  [https://github.com/HEX9CF/CupidConnectorLite](https://github.com/HEX9CF/CupidConnectorLite)
+
 ## 功能简介
 
 - **自动登录**：通过发送登录请求，并处理登录响应，实现自动化登录。
