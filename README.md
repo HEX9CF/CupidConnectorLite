@@ -1,4 +1,4 @@
-# Cupid Connector Lite
+# 🔗 Cupid Connector Lite
 
 ## 项目简介
 
