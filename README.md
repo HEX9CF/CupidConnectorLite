@@ -2,18 +2,23 @@
 
 ## 项目简介
 
-一款用于自动登录汕头大学校园网的轻量级命令行工具，是 Cupid Connector 的轻量版，通过发送登录请求并处理响应，实现自动化登录功能，方便汕大师生登录校园网。
-
-该工具支持自动登录、重新认证、注销账号等功能，同时支持初始化配置文件，简化用户的配置过程。不需要用户手动打开浏览器，输入账号密码，只需双击运行程序即可完成登录操作。将程序添加到开机启动项，即可实现开机自动登录校园网。不同于 Python 脚本，该工具是一个独立的可执行文件，开箱即用，无需安装 Python 环境，方便用户使用。
+一款用于自动登录汕头大学校园网的轻量级命令行工具，是 Cupid Connector 的轻量版，通过发送登录请求并处理响应，实现自动化登录功能，方便汕大师生登录校园网。 该工具支持自动登录、重新认证、注销账号等功能，同时支持初始化配置文件，简化用户的配置过程。不需要用户手动打开浏览器，输入账号密码，只需双击运行程序即可完成登录操作。将程序添加到开机启动项，即可实现开机自动登录校园网。不同于 Python 脚本，该工具是一个独立的可执行文件，开箱即用，无需安装 Python 环境，方便用户使用。
 
 A lightweight tool for automatically logging into the Shantou University campus network. It automates the login process by sending login requests and handling responses, making it convenient for Shantou University students and staff to log into the campus network.
 
 ## 软件版本
 
-- Cupid Connector（带 GUI 完整版）
-  [https://github.com/HEX9CF/CupidConnector](https://github.com/HEX9CF/CupidConnector)
-- Cupid Connector Lite（命令行轻量版）
-  [https://github.com/HEX9CF/CupidConnectorLite](https://github.com/HEX9CF/CupidConnectorLite)
+### Cupid Connector
+
+完整 GUI 程序，支持流量监控、流量告警、自动注销等功能
+
+仓库地址：[https://github.com/HEX9CF/CupidConnector](https://github.com/HEX9CF/CupidConnector)
+
+### Cupid Connector Lite
+
+轻量版命令行工具，仅提供自动登录功能，可配合自动退出和开机自启使用
+
+仓库地址：[https://github.com/HEX9CF/CupidConnectorLite](https://github.com/HEX9CF/CupidConnectorLite)
 
 ## 功能简介
 
@@ -46,7 +51,7 @@ A lightweight tool for automatically logging into the Shantou University campus 
 
 ```env
 # 校园网认证接口
-STU_URL=http://a.stu.edu.cn/ac_portal/login.php
+STU_URL=https://a.stu.edu.cn/ac_portal/login.php
 
 # 校园网用户名
 STU_USERNAME=username
